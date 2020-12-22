@@ -26,8 +26,9 @@ video.addEventListener('play', () => {
     // faceapi.draw.drawDetections(canvas, resizedDetections)
     // faceapi.draw.drawFaceLandmarks(canvas, resizedDetections)
     // faceapi.draw.drawFaceExpressions(canvas, resizedDetections)
+    canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)
     resizedDetections.forEach(detection => {
-      canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height)
+     
       const box = detection.detection.box
       const drawBox = new faceapi.draw.DrawBox(box, {label: 'Face'})
       drawBox.draw(canvas)
