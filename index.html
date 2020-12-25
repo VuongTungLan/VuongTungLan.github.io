@@ -1,15 +1,21 @@
-<!doctype html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <style>
-    /* CSS comes here */
-    </style>
-    <title>My Favorite Sport</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script  defer src="./js/face-api.min.js"></script>
+  <script defer src="./js/script.js"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </head>
-
 <body>
-  <canvas id="canvas" height="1920" width="1080"></canvas>
-    <script src="script.js"></script>
+  <div class="page-container" class="margin">
+    <video onloadedmetadata="onPlay(this)" id="inputVideo" autoplay muted playsinline></video>
+    <canvas id="overlay"></canvas>
+    <canvas class="overlay" id="faceOverlay"></canvas>
+  </div>
 </body>
-
 </html>
